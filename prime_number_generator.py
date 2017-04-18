@@ -10,6 +10,6 @@ def generate_prime_numbers(n):
         if k == j:
             prime_numbers.append(j)
         j = j + 1
-    print prime_numbers
+    return prime_numbers
 
 generate_prime_numbers(10)
