@@ -17,6 +17,21 @@ class PrimeTest(unittest.TestCase):
     def test_that_return_type_is_list(self):
         self.assertIsInstance(self.result, list)
 
+    def test_prime_even_number(self):
+        for number in self.result:
+            self.assertFalse(number > 2 and number % 2 == 0)
+
+    def test_divisible_by_three_number(self):
+        for number in self.result:
+            self.assertFalse(number > 3 and number % 3 == 0)
+
+    def test_that_list_member_is_integer(self):
+        for number in self.result:
+            self.assertIsInstance(number, int)
+
+    def test_that_one_never_appears_in_list(self):
+        for number in self.result:
+            self.assertFalse(number == 1)
 
 if __name__ == '__main__':
     unittest.main()
